@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard() {
+export default function MediaCard(props) {
   const classes = useStyles();
 
   return (
@@ -30,7 +30,7 @@ export default function MediaCard() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Book Title Goes Here
+            Title goes here {props.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             Books Descrition Goes Here
@@ -38,7 +38,7 @@ export default function MediaCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary" >
           Save
         </Button>
         <Button size="small" color="primary">
