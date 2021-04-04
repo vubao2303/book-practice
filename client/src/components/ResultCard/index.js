@@ -25,7 +25,7 @@ export default function MediaCard(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image={props.image}
           title="Contemplative Reptile"
         />
         <CardContent>
@@ -33,7 +33,7 @@ export default function MediaCard(props) {
             Title goes here {props.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Books Descrition Goes Here
+            Books Descrition Goes Here {props.synopsis}
           </Typography>
         </CardContent>
       </CardActionArea>
