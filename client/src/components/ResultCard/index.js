@@ -38,9 +38,16 @@ export default function MediaCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" >
+        <Button size="small" color="primary" onClick={(event) => {
+          event.preventDefault();
+          props.saveBooks({ title: props.title, author: props.author, synopsis: props.synopsis, image: props.image, link: props.link });
+        }}>
           Save
         </Button>
+
+        <Link href="#" onClick={preventDefault} color="inherit">
+          {'color="inherit"'}
+        </Link>
         <Button size="small" color="primary">
           Learn More
         </Button>
