@@ -7,6 +7,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+
 
 const useStyles = makeStyles({
   root: {
@@ -25,7 +27,7 @@ export default function MediaCard(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={props.image}
+          src={props.image}
           title="Contemplative Reptile"
         />
         <CardContent>
@@ -45,7 +47,7 @@ export default function MediaCard(props) {
           Save
         </Button>
 
-        <Link href="#" onClick={preventDefault} color="inherit">
+        <Link href="#" color="inherit">
           {'color="inherit"'}
         </Link>
         <Button size="small" color="primary">
