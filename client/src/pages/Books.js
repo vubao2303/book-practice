@@ -7,7 +7,6 @@ import Result from '../components/ResultCard';
 function Books() {
   // ?set state 
   const [books, setBooks] = useState([]);
-  const temp = "Muhammad";
   function loadBooks(event) {
     console.log("loaded")
     event.preventDefault();
@@ -37,20 +36,11 @@ function Books() {
       .catch(err => console.log(err))
   }
 
-  const testSearch = e => {
-    e.preventDefault();
-    console.log("its B");
-  }
 
-  function testAgain(e) {
-    e.preventDefault();
-    console.log("oh hello B")
-  }
 
   return (
     <div>
-      <SearchBar loadBooks={loadBooks} testSearch={testSearch}
-        testAgain={testAgain} temp={temp} />
+      <SearchBar loadBooks={loadBooks} />
 
       {books.map((book, index) => {
         (<Result

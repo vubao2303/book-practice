@@ -23,10 +23,10 @@ function SearchBar(props) {
 
   return (
     <Grid >
-      <form className="content" onSubmit={props.testSearch} >
+      <form className="content" onSubmit={props.loadBooks} >
         <FormControl fullWidth >
           <TextField
-            onChange={props.testSearch}
+            onChange={props.loadBooks}
             className={classes.bar}
             required
             id="search-term"
@@ -36,7 +36,7 @@ function SearchBar(props) {
               endAdornment: (
                 <InputAdornment position="end">
                   <IconButton
-                    onClick={props.testSearch}
+                    onClick={props.loadBooks}
                   >
                     search <SearchIcon />
                   </IconButton>
